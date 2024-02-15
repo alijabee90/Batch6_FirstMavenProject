@@ -10,8 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
-import Utils.DataReader.TestDataReader;
 public class Driver {
 	public static WebDriver driver;
 	static ChromeOptions chromeOptions;
@@ -19,7 +17,7 @@ public class Driver {
 		public static WebDriver getDriver() {
 			String browserType = System.getProperty("browser");
 			if (browserType == null) {
-				browserType = TestDataReader.getProperty("browser_type");
+				browserType = DataReader.getProperty("browserType");
 			}
 			if (driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
 				switch(browserType) {

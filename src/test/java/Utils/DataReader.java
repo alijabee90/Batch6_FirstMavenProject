@@ -4,7 +4,7 @@ import java.util.Properties;
 import java.io.File;
 import java.io.FileInputStream;
 public class DataReader {
-	public class TestDataReader {
+	
 		
 		private static Properties property;
 			
@@ -27,4 +27,4 @@ public class DataReader {
 			}
 }
 
-	}
+
