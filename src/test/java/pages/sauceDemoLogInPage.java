@@ -29,7 +29,7 @@ public class sauceDemoLogInPage {
 	public WebElement loginPassword;
 	
 	@FindBy (xpath = "//input[@id='login-button']")
-	public WebElement loginBtn;
+	public static WebElement loginBtn;
 	
 	@FindBy (css = "h3[data-test='error']")
 	public WebElement loginEmptyError;

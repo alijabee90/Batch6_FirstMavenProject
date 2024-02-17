@@ -26,7 +26,7 @@ public class sauceDemoTest {
 
 	@When("user clicks on the sign in button")
 	public void user_clicks_on_the_sign_in_button() {
-	   logInPage.loginBtn.click();
+	   sauceDemoLogInPage.loginBtn.click();
 	    
 	}
 
@@ -35,4 +35,7 @@ public class sauceDemoTest {
 	    Thread.sleep(1000);
 	    Assert.assertTrue(homePage.homepage_products_textElement.isDisplayed());
 	}
+	    
+	 
+	
 }

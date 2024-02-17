@@ -14,3 +14,5 @@ Scenario: Sauce demo valid login
     When user enters a valid username and password
     And user clicks on the sign in button
     Then user is logged  successfully
+    
+ 
