@@ -21,7 +21,7 @@ public class Utility_Usage_demo {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
+		BrowserUtils utils = new BrowserUtils();
 		//Test case 1
 		//go to https://demoqa.com/alerts
 		driver.get("https://demoqa.com/alerts");
@@ -37,9 +37,9 @@ public class Utility_Usage_demo {
 		
 		
 		// accept is for anything confirmative like: Yes, Okay, Confirm, Accept etc....
-		BrowserUtils.alert_accept(driver);
+		utils.alert_accept(driver);
 		
-//		driver.quit();
+		driver.quit();
 		
 	}
 }
