@@ -17,7 +17,7 @@ public class sauceDemoTest {
 	  Utils.Driver.getDriver().get(DataReader.getProperty("sauce_url"));
 	    
 	}
-
+//  Login Scenario #1 valid username and passowrd = start
 	@When("user enters a valid username and password")
 	public void user_enters_a_valid_username_and_password() {
 	  logInPage.loginUsername.sendKeys(DataReader.getProperty("sauce_username"));
@@ -34,8 +34,33 @@ public class sauceDemoTest {
 	public void user_is_logged_successfully() throws InterruptedException {
 	    Thread.sleep(1000);
 	    Assert.assertTrue(homePage.homepage_products_textElement.isDisplayed());
+	//  Login Scenario #1 valid username and passowrd = end 
 	}
-	    
-	 
 	
+	//  Login Scenario #2 invalid username = start
+	    
+	@When("user enters invalid username and valid password")
+	public void user_enters_invalid_username_and_valid_password() {
+		 logInPage.loginUsername.sendKeys("HeloHelo");
+		  logInPage.loginPassword.sendKeys(DataReader.getProperty("sauce_password"));
+		
+		
+	}
+
+	@Then("user should not be logged in")
+	public void user_should_not_be_logged_in() throws InterruptedException {
+		Thread.sleep(2000);
+	 Assert.assertTrue(sauceDemoLogInPage.loginBtn.isDisplayed());
+	// Scenario #2 invalid username = end
+	    
+	}
+	// login Scenario #3 invalid passowrd = start
+	
+	@When("user enters valid username and invalid password")
+	public void user_enters_valid_username_and_invalid_password() {
+		  logInPage.loginUsername.sendKeys(DataReader.getProperty("sauce_username"));
+		  logInPage.loginPassword.sendKeys("HelloHello");
+		// Log in Scenario #3 invalid passowrd = end
+			
+}
 }
