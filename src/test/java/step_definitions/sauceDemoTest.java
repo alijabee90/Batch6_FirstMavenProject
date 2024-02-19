@@ -61,6 +61,15 @@ public class sauceDemoTest {
 		  logInPage.loginUsername.sendKeys(DataReader.getProperty("sauce_username"));
 		  logInPage.loginPassword.sendKeys("HelloHello");
 		// Log in Scenario #3 invalid passowrd = end
-			
+	}  
+		  // scenario outline invalid - start
+		  
+		  @When("user enters  username {string} and password {string}")
+		  public void user_enters_username_and_password(String username, String password) {
+			  logInPage.loginUsername.sendKeys(username);
+			  logInPage.loginPassword.sendKeys(password);
+		  }
+
+		  // scenario outline invalid - end
 }
-}
+
