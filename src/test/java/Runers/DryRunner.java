@@ -13,9 +13,9 @@ import io.cucumber.junit.CucumberOptions;
 				},
 		features = "src/test/resources/features",
 		glue = "step_definitions",
-		tags="@outline"
-		
+		tags="@outline",
+		dryRun=true 
 		)
-public class TestRunner {
+public class DryRunner {
 
 }
